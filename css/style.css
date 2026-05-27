@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: #fef7e8;
+    color: #2c1a0c;
+    line-height: 1.4;
+}
+
+/* container geral */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem 2rem;
+}
+
+/* header com logo e mantra */
+.hero {
+    text-align: center;
+    padding: 2rem 0 1.5rem;
+    border-bottom: 3px solid #e2b87a;
+    margin-bottom: 2rem;
+}
+
+.logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.logo-icon {
+    background: #d32f2f;
+    width: 110px;
+    height: 110px;
+    border-radius: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 12px 20px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+}
+
+.logo-icon:hover {
+    transform: scale(1.02);
+}
+
+/* homem segurando pizza SVG minimalista e expressivo */
+.pizza-man {
+    width: 90px;
+    fill: white;
+}
+
+.restaurant-name {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #b92b27, #e65c1e);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.05);
+}
+
+.mantra {
+    font-size: 1.2rem;
+    font-style: italic;
+    background: #f3e1be;
+    display: inline-block;
+    padding: 0.4rem 1.6rem;
+    border-radius: 40px;
+    color: #a13e1a;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.05), 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* navegação por categorias (filtro visual) */
+.category-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.7rem;
+    margin: 2rem 0 2rem;
+}
+
+.cat-btn {
+    background: #fff2e2;
+    border: 1px solid #e2b87a;
+    padding: 0.6rem 1.2rem;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    color: #6b3a1c;
+}
+
+.cat-btn.active {
+    background: #d32f2f;
+    border-color: #b71c1c;
+    color: white;
+    box-shadow: 0 4px 8px rgba(211,47,47,0.3);
+}
+
+.cat-btn:hover {
+    background: #e6cba2;
+    transform: translateY(-2px);
+}
+
+/* Seções de categorias */
+.menu-section {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.menu-section.active-section {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    border-left: 8px solid #d32f2f;
+    padding-left: 1rem;
+    margin: 1.5rem 0 1.8rem 0;
+    color: #3e2413;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.8rem;
+}
+
+.card-item {
+    background: white;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    transition: all 0.25s;
+    border: 1px solid #f3e0c2;
+}
+
+.card-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 28px rgba(0,0,0,0.12);
+}
+
+/* Estilo para a imagem do produto */
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: linear-gradient(135deg, #fff5e8, #ffe4cc);
+    transition: transform 0.3s ease;
+}
+
+.card-item:hover .product-image {
+    transform: scale(1.02);
+}
+
+.card-content {
+    padding: 1.2rem 1.2rem 1.2rem;
+}
+
+.item-name {
+    font-size: 1.45rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.item-name h3 {
+    font-size: 1.35rem;
+    color: #2c1a0c;
+}
+
+.price {
+    font-weight: 800;
+    font-size: 1.35rem;
+    color: #d32f2f;
+    background: #fff0e6;
+    padding: 0.2rem 0.7rem;
+    border-radius: 30px;
+}
+
+.description {
+    color: #5a3a27;
+    margin: 0.6rem 0 0.2rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* rodapé duplo */
+footer {
+    margin-top: 3rem;
+    background: #2c1e12;
+    color: #f9e5c1;
+    border-radius: 28px 28px 20px 20px;
+    padding: 1.8rem 2rem;
+}
+
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    border-left: 3px solid #e2b87a;
+    padding-left: 0.7rem;
+    color: #ffd7a5;
+}
+
+.footer-col p, .footer-col a {
+    color: #f0dbb8;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-col a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.developer-credit {
+    text-align: center;
+    margin-top: 1.8rem;
+    padding-top: 1rem;
+    border-top: 1px dashed #b97f4b;
+    font-size: 0.8rem;
+    color: #e7c89c;
+}
+
+/* Placeholder para imagens que não carregarem */
+.product-image-error {
+    background: linear-gradient(135deg, #ffe4cc, #ffd4b0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+@media (max-width: 680px) {
+    .container {
+        padding: 0.8rem 1rem 1.5rem;
+    }
+    .restaurant-name {
+        font-size: 2.3rem;
+    }
+    .section-title {
+        font-size: 1.7rem;
+    }
+    .card-content {
+        padding: 1rem;
+    }
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .product-image {
+        height: 180px;
+    }
+}

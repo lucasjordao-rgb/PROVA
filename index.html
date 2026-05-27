@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Pizzas LJ - Cardápio Oficial</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="logo-area">
+                <div class="logo-icon">
+                    <!-- SVG homem segurando pizza (estilizado) -->
+                    <svg class="pizza-man" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="35" r="14" fill="#FFD966" stroke="#C97E2A" stroke-width="2"/>
+                        <rect x="40" y="48" width="20" height="28" rx="6" fill="#E0A800" stroke="#B45F1B" stroke-width="2"/>
+                        <path d="M40 55 L25 68 L32 72 L44 60" fill="#E0A800" stroke="#B45F1B" stroke-width="1.8"/>
+                        <path d="M60 55 L75 68 L68 72 L56 60" fill="#E0A800" stroke="#B45F1B" stroke-width="1.8"/>
+                        <ellipse cx="24" cy="72" rx="12" ry="6" fill="#FF8C42" stroke="#C23B22" stroke-width="1.5" transform="rotate(-15 24 72)"/>
+                        <circle cx="22" cy="71" r="1.5" fill="#D32F2F"/>
+                        <circle cx="27" cy="73" r="1.5" fill="#D32F2F"/>
+                        <circle cx="24" cy="75" r="1.5" fill="#D32F2F"/>
+                        <path d="M48 23 L52 23 L50 28 Z" fill="#4B2E1A"/>
+                    </svg>
+                </div>
+                <h1 class="restaurant-name">Pizzas LJ</h1>
+                <div class="mantra">🔥 Sabor que abraça, massa artesanal e paixão em cada fatia! 🔥</div>
+            </div>
+        </div>
+
+        <!-- filtro de categorias -->
+        <div class="category-nav" id="categoryNav">
+            <button data-cat="entradas" class="cat-btn active">🍕 Entradas</button>
+            <button data-cat="pizzasG" class="cat-btn">🍕 Pizzas TAMANHO G</button>
+            <button data-cat="pizzasM" class="cat-btn">🍕 Pizzas TAMANHO M</button>
+            <button data-cat="pizzasP" class="cat-btn">🍕 Pizzas (2 ou 1 pessoa)</button>
+            <button data-cat="pizzasDoces" class="cat-btn">🍯 Pizzas Doces</button>
+            <button data-cat="bebidas" class="cat-btn">🥤 Bebidas</button>
+            <button data-cat="sobremesas" class="cat-btn">🍰 Sobremesas</button>
+        </div>
+
+        <!-- Seções do cardápio - cada categoria isolada -->
+        <div id="entradas" class="menu-section active-section">
+            <div class="section-title">🍢 ENTRADAS · Para começar bem</div>
+            <div class="cards-grid" id="entradasGrid"></div>
+        </div>
+        <div id="pizzasG" class="menu-section">
+            <div class="section-title">🍕 PIZZAS TAMANHO G (8 fatias, serve 3-4 pessoas)</div>
+            <div class="cards-grid" id="pizzasGGrid"></div>
+        </div>
+        <div id="pizzasM" class="menu-section">
+            <div class="section-title">🍕 PIZZAS TAMANHO M (6 fatias, serve 2-3 pessoas)</div>
+            <div class="cards-grid" id="pizzasMGrid"></div>
+        </div>
+        <div id="pizzasP" class="menu-section">
+            <div class="section-title">🍕 PIZZAS INDIVIDUAIS (tamanho para 2 ou 1 pessoa) · 4 fatias crocantes</div>
+            <div class="cards-grid" id="pizzasPGrid"></div>
+        </div>
+        <div id="pizzasDoces" class="menu-section">
+            <div class="section-title">🍯 PIZZAS DOCES · Finalização doce e irresistível</div>
+            <div class="cards-grid" id="pizzasDocesGrid"></div>
+        </div>
+        <div id="bebidas" class="menu-section">
+            <div class="section-title">🥤 BEBIDAS · Refrescantes e geladas</div>
+            <div class="cards-grid" id="bebidasGrid"></div>
+        </div>
+        <div id="sobremesas" class="menu-section">
+            <div class="section-title">🍨 SOBREMESAS · A doçura que completa</div>
+            <div class="cards-grid" id="sobremesasGrid"></div>
+        </div>
+
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>🍕 Pizzas LJ</h4>
+                    <p>📍 Rua das Margueritas, 315 - Centro, São Paulo - SP</p>
+                    <p>📞 (11) 3456-7890</p>
+                    <p>✉️ contato@pizzaslj.com.br</p>
+                </div>
+                <div class="footer-col">
+                    <h4>⚙️ LJ SYSTEM</h4>
+                    <p>💻 Desenvolvimento e tecnologia</p>
+                    <p>📱 (11) 91234-5678</p>
+                    <p>✉️ dev@ljsystem.tech</p>
+                    <p>🌐 www.ljsystem.tech</p>
+                </div>
+            </div>
+            <div class="developer-credit">
+                © 2025 Pizzas LJ - Cardápio digital criado por LJ SYSTEM. Todos os sabores feitos com amor.
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
